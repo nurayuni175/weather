@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Defines the language of the document -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design settings -->
+    <title>Weather Information</title> <!-- Title displayed in the browser tab -->
+    <link rel="stylesheet" href="weather.css"> <!-- Link to the external CSS file for styling -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Logo section with an image -->
+            <img src="https://png.pngtree.com/png-clipart/20190906/original/pngtree-cloudy-icon-png-image_4574635.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-links"> <!-- Navigation links list -->
+                <li><a href="indexw.html">Home</a></li> <!-- Link to the home page -->
+                <li><a href="recommendation.html">Recommendation Activities</a></li> <!-- Link to recommendations -->
+                <li><a onclick="goBack()">Go Back</a></li> <!-- Go back to the previous page -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Weather Information</h1> <!-- Main title of the page -->
+        <div id="weather-info">
+            <!-- Weather information will be displayed here dynamically -->
+        </div>
+
+        <section id="activity-suggestions">
+            <h2>Suggested Activities</h2> <!-- Subtitle for activity suggestions -->
+            <ul>
+                <!-- Activity suggestions will be listed here dynamically -->
+            </ul>
+        </section>
+
+        <section id="equipment-checklist">
+            <h2>Manage Your Equipment</h2> <!-- Subtitle for equipment management -->
+            <button class="button-link">
+                <a href="CRUDFile/src/index.html">Add Equipment</a> <!-- Link to add equipment -->
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Weather Activity Suggestions | All Rights Reserved</p> <!-- Footer with copyright notice -->
+    </footer>
+
+    <script src="renderer.js"></script> <!-- Link to external JavaScript file for functionality -->
+    <script>
+        // Fetch weather data when the page loads
+        window.onload = fetchWeather; // Calls the fetchWeather function when the window is loaded
+
+        function goBack() {
+            window.history.back(); // Navigates back to the previous page in the browser history
+        }
+    </script>
+</body>
+</html>

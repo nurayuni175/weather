@@ -1,0 +1,126 @@
+/* Set background image and blur effect */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: 'Arial', sans-serif; /* Set font for the body */
+  background: url('https://i.pinimg.com/564x/b4/b0/eb/b4b0eb26d328a511e026dfb778e77654.jpg') no-repeat center center fixed; /* Set background image */
+  background-size: cover; /* Cover the entire body with the background */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide any overflow */
+}
+
+body::before {
+  content: ""; /* Create a pseudo-element */
+  position: fixed; /* Position it fixed for the entire viewport */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: 0; /* Align to the bottom */
+  background: rgba(255, 255, 255, 0.4); /* White background with some transparency */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  z-index: -1; /* Place it behind other content */
+}
+
+/* Center container */
+.container {
+  text-align: center; /* Center text inside container */
+  color: #333; /* Set text color */
+  width: 350px; /* Fixed width for the container */
+  padding: 20px; /* Padding inside the container */
+  background: rgba(255, 255, 255, 0.5); /* Background with some transparency */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  backdrop-filter: blur(10px); /* Blur effect for background */
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-top: 20px; /* Margin on top */
+}
+
+.search-bar input {
+  padding: 12px; /* Padding inside input */
+  font-size: 16px; /* Font size */
+  border-radius: 20px 0 0 20px; /* Rounded corners on the left */
+  border: none; /* No border */
+  outline: none; /* Remove outline */
+  width: 250px; /* Set fixed width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.search-bar button {
+  padding: 12px; /* Padding inside button */
+  font-size: 18px; /* Font size */
+  border-radius: 0 20px 20px 0; /* Rounded corners on the right */
+  border: none; /* No border */
+  background: #fff; /* White background */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.search-bar button i {
+  font-size: 20px; /* Font size for the icon */
+}
+
+/* Weather information styling */
+.weather-info {
+  margin-top: 50px; /* Margin on top */
+}
+
+.weather-info h1 {
+  font-size: 36px; /* Font size for the city name */
+  margin: 0; /* Remove margin */
+  font-weight: 600; /* Set font weight */
+}
+
+.temperature {
+  font-size: 60px; /* Font size for temperature */
+  font-weight: bold; /* Bold font */
+  margin: 10px 0; /* Margin on top and bottom */
+  color: #ff5722; /* Color for temperature */
+}
+
+.time-info {
+  margin-top: 20px; /* Margin on top */
+  background: rgba(255, 255, 255, 0.3); /* Background with transparency */
+  padding: 15px; /* Padding inside */
+  border-radius: 15px; /* Rounded corners */
+  display: inline-block; /* Inline block for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.time-info h2 {
+  margin: 0; /* Remove margin */
+  font-size: 32px; /* Font size for time */
+}
+
+.time-info p {
+  margin: 5px 0 0 0; /* Margin on top */
+  font-size: 18px; /* Font size for date */
+}
+
+/* Manage activities button */
+.manage-activities {
+  margin-top: 40px; /* Margin on top */
+}
+
+.manage-activities a {
+  font-size: 18px; /* Font size for link */
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding: 12px 20px; /* Padding inside */
+  background: #6a92ff; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: background 0.3s ease; /* Transition effect for background */
+}
+
+.manage-activities a:hover {
+  background: #5479d6; /* Change background on hover */
+}

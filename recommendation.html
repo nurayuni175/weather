@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for proper text rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile devices -->
+    <title>Activity Recommendations</title> <!-- Title of the page -->
+    <link rel="stylesheet" href="recommendations.css"> <!-- Link to CSS stylesheet for styling -->
+</head>
+<body>
+    <header> <!-- Header section containing logo and navigation -->
+        <div class="logo">
+            <img src="https://png.pngtree.com/png-clipart/20190906/original/pngtree-cloudy-icon-png-image_4574635.jpg" alt="Logo"> <!-- Logo image -->
+        </div>
+        <nav>
+            <ul class="nav-links"> <!-- Navigation links -->
+                <li><a href="indexw.html">Home</a></li> <!-- Link to Home page -->
+                <li><a href="weather.html">Weather Info</a></li> <!-- Link to Weather Information page -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content"> <!-- Main content area -->
+        <div class="container">
+            <h1>Activity Recommendations</h1> <!-- Main heading -->
+            <div class="search-bar"> <!-- Search bar for user input -->
+                <input type="text" id="country-input" placeholder="Enter Country"> <!-- Input for entering country name -->
+                <button onclick="fetchWeatherData()">Get Recommendations</button> <!-- Button to fetch recommendations -->
+            </div>
+            <div id="recommendations"> <!-- Placeholder for activity recommendations -->
+                <!-- Activity recommendations will appear here -->
+            </div>
+        </div>
+    </main>
+
+    <footer> <!-- Footer section -->
+        <p>&copy; 2024 Weather Activity Suggestions | All Rights Reserved</p> <!-- Copyright notice -->
+    </footer>
+
+    <script src="recommendations.js"></script> <!-- Link to JavaScript file for functionality -->
+</body>
+</html>

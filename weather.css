@@ -1,0 +1,158 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif; /* Font family for the entire page */
+  color: #333; /* Default text color */
+  line-height: 1.6; /* Line height for readability */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #f5f5f5; /* Light grey background for subtle contrast */
+}
+
+h1, h2, h3, h4 {
+  color: #1e272e; /* Dark color for headers */
+}
+
+h1 {
+  font-size: 2em; /* Font size for main header */
+  margin-top: 20px; /* Margin at the top */
+  text-align: center; /* Center the header */
+  color: #4c72af; /* Blue color for main header */
+}
+
+h2 {
+  font-size: 1.5em; /* Font size for sub-header */
+  color: #4c72af; /* Blue color for sub-header */
+  margin-top: 30px; /* Margin at the top */
+}
+
+/* Header Styling */
+header {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Align items vertically center */
+  padding: 15px 20px; /* Padding around the header */
+  background-color: #1e272e; /* Dark background for header */
+  color: #fff; /* White text color */
+  width: 100%; /* Full width of the page */
+  position: sticky; /* Make the header sticky on scroll */
+  top: 0; /* Position at the top */
+  z-index: 1000; /* High z-index to stay above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.logo img {
+  width: 50px; /* Logo image size */
+}
+
+nav ul {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Use flexbox for navigation items */
+  gap: 20px; /* Space between navigation items */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* White text color for links */
+  font-weight: bold; /* Bold text for links */
+  padding: 8px 15px; /* Padding for links */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background-color 0.3s ease; /* Smooth background transition on hover */
+}
+
+nav ul li a:hover {
+  background-color: #f39c12; /* Change background on hover */
+}
+
+/* Main Container for Weather Info */
+#weather-info {
+  padding: 20px; /* Padding inside the weather info container */
+  background-color: #fff; /* White background for the container */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Shadow effect for depth */
+  margin-bottom: 20px; /* Space below the container */
+}
+
+/* Activity Suggestions Styling */
+#activity-suggestions ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+#activity-suggestions li {
+  display: flex; /* Use flexbox for list items */
+  align-items: center; /* Align items vertically center */
+  padding: 12px; /* Padding inside list items */
+  font-size: 1em; /* Font size for list items */
+  color: #444; /* Darker text color for better readability */
+  background-color: #fff; /* White background for list items */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 10px; /* Space below each list item */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+  transition: transform 0.2s; /* Smooth transformation on hover */
+}
+
+#activity-suggestions li:hover {
+  transform: scale(1.05); /* Slightly scale up the list item on hover */
+}
+
+.activity-icon {
+  width: 40px; /* Size for activity icons */
+  height: 40px; /* Size for activity icons */
+  margin-right: 10px; /* Space to the right of the icon */
+  border-radius: 50%; /* Make the icon circular */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect for icons */
+}
+
+/* Button Styling */
+button, .button-link {
+  display: inline-block; /* Allow buttons to be inline */
+  padding: 10px 20px; /* Padding inside buttons */
+  margin-top: 15px; /* Space above buttons */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #4c72af; /* Blue background for buttons */
+  color: white; /* White text color */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 1em; /* Font size for buttons */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s; /* Smooth background transition on hover */
+}
+
+button:hover, .button-link:hover {
+  background-color: #ffffff; /* Change background on hover */
+  color: #4c72af; /* Change text color on hover */
+  border: 1px solid #4c72af; /* Add border on hover */
+}
+
+.button-link {
+  text-align: center; /* Center text inside button link */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #1e272e; /* Dark background for footer */
+  color: #fff; /* White text color */
+  text-align: center; /* Center text inside footer */
+  padding: 20px; /* Padding inside footer */
+  font-size: 1rem; /* Font size for footer text */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+  width: 100%; /* Full width of the footer */
+  position: relative; /* Footer position */
+  bottom: 0; /* Position at the bottom */
+}
+
+footer p {
+  margin: 0; /* Remove margin from footer paragraphs */
+}
+
+.social-links a {
+  text-decoration: none; /* Remove underline from social links */
+  color: #f39c12; /* Orange color for social links */
+  padding: 0 10px; /* Space around social link icons */
+  font-size: 1.5rem; /* Size for social link icons */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.social-links a:hover {
+  color: #fff; /* Change color on hover */
+}

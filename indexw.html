@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+  <title>Weather Activity Suggestions</title> <!-- Page title -->
+  <link rel="stylesheet" href="index.css"> <!-- Link to CSS stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+
+  <div class="container"> <!-- Main container for content -->
+    <div class="search-bar"> <!-- Search bar section -->
+      <input type="text" id="country-input" placeholder="Search Country"> <!-- Input for country search -->
+      <button onclick="goToWeatherPage()"> <!-- Button to trigger search -->
+        <i class="fas fa-search"></i> <!-- Search icon -->
+      </button>
+    </div>
+
+    <div id="weather-info" class="weather-info"> <!-- Weather info section -->
+      <h1 id="city-name">Malaysia</h1> <!-- Default city name -->
+      <div id="temperature" class="temperature">27°C</div> <!-- Default temperature -->
+      <div class="time-info"> <!-- Time and date information -->
+        <h2 id="time">08:30 AM</h2> <!-- Default time -->
+        <p id="date">Thursday, 31 November 2024</p> <!-- Default date -->
+      </div>
+    </div>
+
+  <!-- Include Font Awesome script -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="renderer.js"></script> <!-- Link to renderer.js script -->
+  <script>
+    // Function to redirect to the weather page
+    function goToWeatherPage() {
+      const country = document.getElementById('country-input').value.trim(); // Get the country input value
+      const date = new Date().toISOString().split('T')[0]; // Get the current date in YYYY-MM-DD format
+      if (country) { // Check if country input is not empty
+        // Redirect to weather.html with country and date as query parameters
+        window.location.href = `weather.html?country=${encodeURIComponent(country)}&date=${encodeURIComponent(date)}`;
+      } else {
+        alert("Please enter a country."); // Alert if input is empty
+      }
+    }
+
+    // Event listener for Enter key to trigger search
+    document.getElementById('country-input').addEventListener('keyup', function (event) {
+      if (event.key === 'Enter') { // Check if the pressed key is Enter
+        goToWeatherPage(); // Call the search function
+      }
+    });
+  </script>
+</body>
+</html>

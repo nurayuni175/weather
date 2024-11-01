@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Equipment - CRUD App</title>
+    <link rel="stylesheet" href="indexCRUDFile.css"> <!-- Link to CSS file -->
+    <link rel="stylesheet" href="photon.min.css"> <!-- Optional CSS for additional styling -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://png.pngtree.com/png-clipart/20190906/original/pngtree-cloudy-icon-png-image_4574635.jpg" alt="Logo"> <!-- Logo Image -->
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a onclick="goBack()">Go Back</a></li> <!-- Back navigation link -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-wrapper">
+        <h1>Manage Your Equipment</h1>
+        <section class="form-section">
+            <form>
+                <fieldset>
+                    <legend>Equipment Details</legend>
+                    <div class="form-group">
+                        <label for="fileName">File Name</label>
+                        <input id="fileName" type="text" class="form-control" placeholder="Enter equipment file name"> <!-- Input for file name -->
+                    </div>
+                    <div class="form-group">
+                        <label for="fileActivity">Equipment Details</label>
+                        <textarea id="fileActivity" class="form-control" rows="5" placeholder="Describe the equipment"></textarea> <!-- Textarea for equipment details -->
+                    </div>
+                </fieldset>
+                <div class="button-group">
+                    <button id="btnCreate" class="btn">Create</button> <!-- Create button -->
+                    <button id="btnUpdate" class="btn">Update</button> <!-- Update button -->
+                    <button id="btnRead" class="btn">Read</button> <!-- Read button -->
+                    <button id="btnDelete" class="btn">Delete</button> <!-- Delete button -->
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Weather Activity Suggestions | All Rights Reserved</p> <!-- Footer text -->
+    </footer>
+
+    <script>
+        // Function to navigate back to the previous page in the browser history
+        function goBack() {
+            window.history.back(); // Calls the browser's back function to return to the last page
+        }
+        
+        // Adding event listeners for button clicks
+        document.getElementById('btnCreate').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+            // Code to create equipment entry would go here
+            console.log('Creating equipment...'); // Placeholder for actual functionality
+        });
+
+        document.getElementById('btnUpdate').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+            // Code to update equipment entry would go here
+            console.log('Updating equipment...'); // Placeholder for actual functionality
+        });
+
+        document.getElementById('btnRead').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+            // Code to read equipment entry would go here
+            console.log('Reading equipment...'); // Placeholder for actual functionality
+        });
+
+        document.getElementById('btnDelete').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+            // Code to delete equipment entry would go here
+            console.log('Deleting equipment...'); // Placeholder for actual functionality
+        });
+    </script>
+    <script src="main.js"></script> <!-- Link to external JavaScript file (if used) -->
+</body>
+</html>
